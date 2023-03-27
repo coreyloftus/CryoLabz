@@ -16,7 +16,6 @@ export default function Home() {
             </Head>
             <main className="w-full h-screen bg-purple-100">
                 <div>
-                    <h2>CryoLabz</h2>
                     <Hero />
                 </div>
             </main>

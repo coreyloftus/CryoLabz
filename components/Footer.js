@@ -3,7 +3,7 @@ import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa"
 
 const Footer = () => {
     return (
-        <div className="w-full p-4 fixed bottom-0 mt-10">
+        <div className="fixed w-full p-4 bottom-0 mt-10">
             <div className="flex p-4 justify-around">
                 <div className="grid grid-cols-3 place-items-center gap-10">
                     <FaLinkedin size={30} />

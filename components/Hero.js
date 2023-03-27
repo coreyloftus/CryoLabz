@@ -4,8 +4,13 @@ const Hero = () => {
     return (
         <div>
             <div className="w-full h-screen bg-purple-100">
-                <div className="grid place-content-center">
-                    <h2>Hero Section</h2>
+                <div className="grid grid-cols-2 items-center place-content-center">
+                    <div className="flex items-center justify-center">
+                        <h2>left half</h2>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <p>right half</p>
+                    </div>
                 </div>
             </div>
         </div>
