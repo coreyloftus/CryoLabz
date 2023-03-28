@@ -12,13 +12,13 @@ const Navbar = () => {
                     </div>
                 </Link>
                 {/* Links to other pages */}
-                <Link href="/About">
+                <Link href="/about">
                     <button className="border-b-2 border-transparent hover:border-gray-100 p-2">About</button>
                 </Link>
-                <Link href="/Testimonials">
+                <Link href="/testimonials">
                     <button className="border-b-2 border-transparent hover:border-gray-100 p-2">Testimonials</button>
                 </Link>
-                <Link href="/Book">
+                <Link href="/book">
                     <button className="bg-orange-400 hover:bg-orange-500 rounded-lg p-2">Book a Session</button>
                 </Link>
             </div>

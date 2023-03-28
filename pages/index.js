@@ -1,7 +1,8 @@
 import Head from "next/head"
-import Image from "next/image"
 import { Inter } from "next/font/google"
 import Hero from "@/components/Hero"
+import Testimonials from "@/components/Testimonials"
+import ContactForm from "@/components/ContactForm"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -14,9 +15,11 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="w-full h-screen bg-blue-100">
+            <main className="bg-gradient-to-b from-blue-100 to-blue-900">
                 <div>
                     <Hero />
+                    <Testimonials />
+                    <ContactForm />
                 </div>
             </main>
         </>
