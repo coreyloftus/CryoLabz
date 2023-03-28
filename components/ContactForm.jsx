@@ -18,7 +18,6 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Do something with the form data (e.g. send it to a backend API)
         console.log(formData)
     }
     return (
@@ -39,14 +38,21 @@ const ContactForm = () => {
                                     <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" className="border p-2 rounded-md w-full" required />
                                 </div>
                                 <div className="row-start-6 col-start-1 col-span-2 p-2 min-h-fit">
-                                    <textarea name="heardAbout" rows={4} value={formData.heardAbout} onChange={handleChange} placeholder="How did you hear about Cryolabz?" className="border p-2 rounded-md w-full" />
+                                    <select name="heardAbout" value={formData.heardAbout} onChange={handleChange} className="border p-2 rounded-md w-full" required>
+                                        <option value="">How did you hear about Cryolabz?</option>
+                                        <option value="search">Search engine</option>
+                                        <option value="social">Social media</option>
+                                        <option value="friend">From a friend</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    {formData.heardAbout === "other" && <input type="text" name="heardAboutOther" value={formData.heardAboutOther} onChange={handleChange} placeholder="Please specify" className="border p-2 rounded-md mt-2 w-full" />}
                                 </div>
                                 <div className="row-start-7 p-2 flex">
                                     <button className="mx-auto bg-blue-500 hover:bg-orange-500 rounded-lg p-2 mt-1 w-[50%]  max-w-[300px] text-2xl text-gray-50">Send</button>
                                 </div>
                             </form>
                             <div>
-                                <div className="hidden rounded-md md:grid md:grid-cols-2">
+                                <div className="hidden rounded-md lg:grid lg:grid-cols-2">
                                     <div className="text-xl p-4 flex justify-end">
                                         <FaLinkedin size={30} />
                                     </div>
