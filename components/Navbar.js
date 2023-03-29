@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FaAtom } from "react-icons/fa"
 const Navbar = () => {
     return (
-        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2">
+        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins">
             <div className="flex items-center justify-between">
                 <Link href="/">
                     <div className="text-left flex items-center">

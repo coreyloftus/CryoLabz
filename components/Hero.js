@@ -6,7 +6,7 @@ import icebackground from "../public/assets/icebackground.jpg"
 const Hero = () => {
     return (
         <div>
-            <div className="h-[calc(100vh-58px)] text-gray-50">
+            <div className="h-[calc(100vh-58px)] text-gray-50 font-poppins">
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="rounded-lg p-2 w-full h-full">
                         {/* <div className="absolute w-full h-full overflow-hidden cover z-[0]">
