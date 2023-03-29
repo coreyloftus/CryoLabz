@@ -4,7 +4,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 const Testimonials = () => {
     const reviews = [
         {
-            name: "customer 1",
+            name: "Corey Loftus",
             review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
             stars: 5,
         },
@@ -15,6 +15,26 @@ const Testimonials = () => {
         },
         {
             name: "customer 3",
+            review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
+            stars: 5,
+        },
+        {
+            name: "customer 4",
+            review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
+            stars: 5,
+        },
+        {
+            name: "customer 4",
+            review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
+            stars: 5,
+        },
+        {
+            name: "customer 4",
+            review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
+            stars: 5,
+        },
+        {
+            name: "customer 4",
             review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
             stars: 5,
         },

@@ -40,12 +40,15 @@ const ContactForm = () => {
                                 <div className="row-start-6 col-start-1 col-span-2 p-2 min-h-fit">
                                     <select name="heardAbout" value={formData.heardAbout} onChange={handleChange} className="border p-2 rounded-md w-full" required>
                                         <option value="">How did you hear about Cryolabz?</option>
-                                        <option value="search">Search engine</option>
-                                        <option value="social">Social media</option>
+                                        <option value="instagram">Instagram</option>
+                                        <option value="twitter">Twitter</option>
                                         <option value="friend">From a friend</option>
                                         <option value="other">Other</option>
                                     </select>
                                     {formData.heardAbout === "other" && <input type="text" name="heardAboutOther" value={formData.heardAboutOther} onChange={handleChange} placeholder="Please specify" className="border p-2 rounded-md mt-2 w-full" />}
+                                </div>
+                                <div className="row-start-3 col-start-1 col-span-2 p-2">
+                                    <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder="How can we help?" className="border p-2 rounded-md w-full resize-none" required />
                                 </div>
                                 <div className="row-start-7 p-2 flex">
                                     <button className="mx-auto bg-blue-500 hover:bg-orange-500 rounded-lg p-2 mt-1 w-[50%]  max-w-[300px] text-2xl text-gray-50">Send</button>

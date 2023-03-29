@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { Inter } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 import Hero from "@/components/Hero"
 import Testimonials from "@/components/Testimonials"
 import ContactForm from "@/components/ContactForm"
