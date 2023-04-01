@@ -5,7 +5,7 @@ import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 
 const index = () => {
     return (
-        <div className="bg-gradient-to-b from-blue-100 to-blue-900">
+        <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700">
             <div className="h-screen w-full">
                 <div className="flex flex-col justify-center p-4">
                     <div className="text-center pb-8">

@@ -18,9 +18,6 @@ const Navbar = () => {
                 <Link href="/contact">
                     <button className="border-b-2 border-transparent hover:border-gray-100 p-2">Contact</button>
                 </Link>
-                <Link href="/testimonials">
-                    <button className="border-b-2 border-transparent hover:border-gray-100 p-2">Testimonials</button>
-                </Link>
                 <Link href="/book">
                     <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2">Book a Session</button>
                 </Link>
