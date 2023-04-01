@@ -1,14 +1,19 @@
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { FaAtom } from "react-icons/fa"
+import logoOnly from "../public/assets/Cryolabz-logo-only.png"
+import textOnly from "../public/assets/Cryolabz-text-only.png"
 const Navbar = () => {
     return (
         <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins z-20">
             <div className="flex items-center justify-between">
                 <Link href="/">
                     <div className="text-left flex items-center">
-                        <FaAtom size={40} />
-                        <p className="font-bold text-lg hover:animate-pulse">CryoLabz</p>
+                        <Image src={logoOnly} alt="Cryolabz Logo" width="50" />
+                        <div className="filter brightness-200">
+                            <Image src={textOnly} alt="Cryolabz Text" width="150" />
+                        </div>
                     </div>
                 </Link>
                 {/* Links to other pages */}
