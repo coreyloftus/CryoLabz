@@ -1,21 +1,28 @@
 import React from "react"
 import Link from "next/link"
-import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa"
+import { FaFacebookSquare, FaLinkedin, FaTwitterSquare, FaInstagram } from "react-icons/fa"
+import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 
 const Footer = () => {
     return (
         <div className="w-full bg-gray-800 text-gray-100 p-2 bottom-0">
             <div className="flex p-4 justify-around">
                 <div className="grid grid-cols-3 place-items-center gap-10">
-                    <span className="hover:text-gray-400 ">
-                        <FaLinkedin className="" size={40} />
-                    </span>
-                    <span className="hover:text-gray-400">
-                        <FaFacebookSquare size={40} />
-                    </span>
-                    <span className="hover:text-gray-400">
-                        <FaTwitterSquare size={40} />
-                    </span>
+                    <Link href="tel:718-912-4745">
+                        <span className="hover:text-gray-400">
+                            <AiOutlinePhone size={40} />
+                        </span>
+                    </Link>
+                    <Link href="mailto:contact@cryolabz.net">
+                        <span className="hover:text-gray-400">
+                            <AiOutlineMail size={40} />
+                        </span>
+                    </Link>
+                    <Link href="https://www.instagram.com/cryolabz/">
+                        <span className="hover:text-gray-400">
+                            <FaInstagram size={40} />
+                        </span>
+                    </Link>
                 </div>
                 <div>
                     <Link href="/contact">

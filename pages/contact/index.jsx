@@ -1,47 +1,30 @@
 import React from "react"
-import { FaLinkedin, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa"
+import Link from "next/link"
+import { FaInstagram } from "react-icons/fa"
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 
 const index = () => {
     return (
-        <div className="bg-gradient-to-b from-blue-100 to-blue-900">
+        <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700">
             <div className="h-screen w-full">
                 <div className="flex flex-col justify-center p-4">
                     <div className="text-center pb-8">
                         <p className="text-3xl font-bold">Contact Us</p>
                         <p className="">We're happy to chat.</p>
                     </div>
-                    <div className="rounded-md grid grid-cols-2 place-content-evenly">
-                        <div className="text-xl text-right p-4 flex justify-end">
-                            <FaLinkedin size={30} />
-                        </div>
-                        <ul className="text-md p-4">
-                            <li>@cryolabz</li>
-                        </ul>
-                        <div className="text-xl text-right p-4 flex justify-end">
-                            <FaTwitterSquare size={30} />
-                        </div>
-                        <ul className="text-md p-4">
-                            <li>@cryolabz</li>
-                        </ul>
-                        <div className="text-xl text-right p-4 flex justify-end">
-                            <FaFacebookSquare size={30} />
-                        </div>
-                        <ul className="text-md p-4">
-                            <li>facebook.com/cryolabs</li>
-                        </ul>
-                        <div className="text-xl text-right p-4 flex justify-end">
+                    <div className="grid grid-cols-2 gap-4 m-auto">
+                        <Link href="https://www.instagram.com/cryolabz/" className="row-start-1 col-span-2 p-4 text-lg flex hover:text-gray-500">
+                            <FaInstagram size={30} className="justify-self-start" />
+                            <p className="text-md pl-8">@cryolabz</p>
+                        </Link>
+                        <Link href="tel:718-912-4745" className="row-start-2 col-span-2 p-4 text-lg flex hover:text-gray-500 ">
                             <AiOutlinePhone size={30} />
-                        </div>
-                        <ul className="text-md p-4">
-                            <li>+1 (347) 555-5555</li>
-                        </ul>
-                        <div className="text-xl text-right p-4 flex justify-end">
+                            <p className="text-md pl-8">+1 (718) 912-4745</p>
+                        </Link>
+                        <Link href="mailto:contact@cryolabz.net" className="row-start-3 col-span-2 p-4 text-lg flex hover:text-gray-500">
                             <AiOutlineMail size={30} />
-                        </div>
-                        <ul className="text-md p-4">
-                            <li>hello@cryolabz.com</li>
-                        </ul>
+                            <p className="text-md pl-8">contact@cryolabz.net</p>
+                        </Link>
                     </div>
                 </div>
             </div>

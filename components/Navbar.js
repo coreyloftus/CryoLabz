@@ -1,26 +1,36 @@
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { FaAtom } from "react-icons/fa"
+import logoOnly from "../public/assets/Cryolabz-logo-only.png"
+import textOnly from "../public/assets/Cryolabz-text-only.png"
 const Navbar = () => {
     return (
-        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2">
+        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins z-20">
             <div className="flex items-center justify-between">
                 <Link href="/">
-                    <div className="text-left flex items-center">
-                        <FaAtom size={40} />
-                        <p className="font-bold text-lg hover:animate-pulse">CryoLabz</p>
+                    <div className="text-left flex items-center hover:animate-pulse">
+                        <Image src={logoOnly} alt="Cryolabz Logo" width="50" />
+                        <div className="filter brightness-200">
+                            <Image src={textOnly} alt="Cryolabz Text" width="150" />
+                        </div>
                     </div>
                 </Link>
                 {/* Links to other pages */}
-                <Link href="/about">
-                    <button className="border-b-2 border-transparent hover:border-gray-100 p-2">About</button>
-                </Link>
-                <Link href="/testimonials">
-                    <button className="border-b-2 border-transparent hover:border-gray-100 p-2">Testimonials</button>
-                </Link>
-                <Link href="/book">
-                    <button className="bg-orange-400 hover:bg-orange-500 rounded-lg p-2">Book a Session</button>
-                </Link>
+                <div>
+                    <p className="font-bold">Free consultations -- Book now!</p>
+                </div>
+                <div>
+                    <Link href="/about">
+                        <button className="mx-4 border-b-2 border-transparent hover:border-gray-100 p-2">About</button>
+                    </Link>
+                    <Link href="/contact">
+                        <button className="mx-4 border-b-2 border-transparent hover:border-gray-100 p-2">Contact</button>
+                    </Link>
+                    <Link href="/book">
+                        <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2">Book a Session</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
