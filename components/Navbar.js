@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FaAtom } from "react-icons/fa"
 const Navbar = () => {
     return (
-        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins">
+        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins z-20">
             <div className="flex items-center justify-between">
                 <Link href="/">
                     <div className="text-left flex items-center">
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <button className="border-b-2 border-transparent hover:border-gray-100 p-2">Testimonials</button>
                 </Link>
                 <Link href="/book">
-                    <button className="bg-orange-400 hover:bg-orange-500 rounded-lg p-2">Book a Session</button>
+                    <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2">Book a Session</button>
                 </Link>
             </div>
         </div>
