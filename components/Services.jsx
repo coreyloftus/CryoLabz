@@ -1,4 +1,6 @@
 import React from "react"
+import jointpain from "public/assets/joint-pain.png"
+import Image from "next/image"
 
 const Services = () => {
     return (
@@ -7,8 +9,8 @@ const Services = () => {
                 <div className="bg-blue-50 text-gray-800 p-6 flex-grow">
                     <div className=""></div>
                     <h2 className="text-3xl font-bold pb-2 mb-4 text-center border-b text-[#11689b]">Services</h2>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="">
+                    <div className="sm:flex md:grid grid-rows-2 grid-cols-2 gap-4">
+                        <div className="order-2 sm:order-1 row-span-2 md:row-start-1">
                             <div className="pb-6">
                                 <h3 className="text-xl font-bold text-[#2d99cd]">Cryo Slim:</h3>
                                 <p className="text-md">
@@ -40,8 +42,8 @@ const Services = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-black h-full">
-                            <h2>image box</h2>
+                        <div className="relative order-1 md:row-span-2 sm:order-2 md:row-start-2">
+                            <Image src={jointpain} objectFit="cover" objectPosition="bottom" className="w-full h-full" layout="fill" />
                         </div>
                     </div>
                 </div>
