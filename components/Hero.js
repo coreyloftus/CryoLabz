@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="h-[calc(100vh-58px)] text-gray-50 font-poppins">
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="w-full h-full flex flex-cols text-center justify-center items-center">
-                        <div className="bg-gray-800 rounded-lg p-4">
+                        <div className="bg-blue-50 text-gray-800 rounded-lg p-4">
                             <div className="px-6 mx-auto">
                                 <Image src={logo} alt="Cryolabz Logo" width="450" />
                             </div>
