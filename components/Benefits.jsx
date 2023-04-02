@@ -2,8 +2,8 @@ import React from "react"
 
 const Benefits = () => {
     return (
-        <div className="h-screen w-full bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50">
-            <div className="flex flex-col justify-center p-4">
+        <div className="h-screen w-full text-gray-50">
+            <div className="h-full flex flex-col justify-center p-4">
                 <div className="text-center pb-8">
                     <p className="text-3xl font-bold">Benefits</p>
                 </div>
