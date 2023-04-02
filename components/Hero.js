@@ -8,17 +8,17 @@ const Hero = () => {
         <div>
             <div className="h-[calc(100vh-58px)] text-gray-50 font-poppins">
                 <div className="flex flex-col items-center justify-center h-full">
-                    <div className="w-full h-full flex flex-cols text-center justify-center items-center">
-                        <div className="bg-blue-50 text-gray-800 rounded-lg p-4">
-                            <div className="px-6 mx-auto">
-                                <Image src={logo} alt="Cryolabz Logo" width="450" />
+                    <div className="w-full flex flex-cols text-center justify-center items-center p-6">
+                        <div className="bg-blue-50 text-gray-800 rounded-lg p-6">
+                            <div className="mx-auto relative">
+                                <Image src={logo} width={450} height={450} alt="Cryolabz Logo" />
                             </div>
                             <div className="text-xl">
-                            <p className="">Your on-the-go mobile cryotherapy service in NYC</p>
-                            <p>Check it out -- book a session</p>
+                                <p className="">Your on-the-go mobile cryotherapy service in NYC</p>
+                                <p>Check it out -- book a session</p>
                             </div>
                             <Link href="/book">
-                                <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80  rounded-lg p-4 mt-2 w-[50%] text-2xl text-gray-50 min-w-fit">Book a session</button>
+                                <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-4 mt-4 w-[50%] text-2xl text-gray-50 min-w-fit">Book a session</button>
                             </Link>
                         </div>
                     </div>
