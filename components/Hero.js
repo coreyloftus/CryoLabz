@@ -1,7 +1,6 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import icebackground from "../public/assets/icebackground.jpg"
 import logo from "../public/assets/Cryolabz-logo.png"
 
 const Hero = () => {

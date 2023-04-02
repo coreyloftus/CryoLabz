@@ -4,6 +4,7 @@ const Services = () => {
     return (
         <div className="h-full text-gray-50">
             <div className="flex flex-col items-center justify-center h-full">
+                <h2 className="text-3xl">Services</h2>
                 <div className="flex justify-center">
                     <div>
                         <h3 className="text-xl font-bold">Cryo Slim Services</h3>

@@ -1,12 +1,9 @@
 import Head from "next/head"
-import { Inter, Poppins } from "next/font/google"
 import Hero from "@/components/Hero"
 import Testimonials from "@/components/Testimonials"
 import ContactForm from "@/components/ContactForm"
 import Services from "@/components/Services"
 import Benefits from "@/components/Benefits"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
     return (
