@@ -16,7 +16,11 @@ const Navbar = () => {
     return (
         <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins z-20">
             <div className="flex items-center justify-between">
-                <Link href="/">
+                <Link
+                    href="/"
+                    onClick={() => {
+                        setMobileMenu(false)
+                    }}>
                     <div className="text-left flex items-center hover:animate-pulse">
                         <Image src={logoOnly} alt="Cryolabz Logo" width="50" />
                         <div className="filter brightness-200">
@@ -46,33 +50,28 @@ const Navbar = () => {
                             <GiHamburgerMenu onClick={toggleMobileMenu} size={40} className="text-[#2bbff0]/80" />
                         </div>
                     )}
-
-                    {mobileMenu && (
-                        <div className="w-full mt-2">
-                            <div className="border-t-2 border-b-2 border-gray-700">
-                                <Link href="/about">
-                                    <button className="w-full text-left hover:bg-gray-700 p-2">About</button>
-                                </Link>
-                            </div>
-                            <div className="border-b-2 border-gray-700">
-                                <Link href="/contact">
-                                    <button className="w-full text-left hover:bg-gray-700 p-2">Contact</button>
-                                </Link>
-                            </div>
-                            <div className="border-b-2 border-gray-700">
-                                <Link href="/book">
-                                    <button className="w-full text-left hover:bg-gray-700 p-2">Book a Session</button>
-                                </Link>
-                            </div>
-                            <div className="mt-2">
-                                <button className="w-full bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2" onClick={toggleMobileMenu}>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    )}
                 </div>
+                {mobileMenu && <RxCross1 size={30} onClick={toggleMobileMenu} />}
             </div>
+            {mobileMenu && (
+                <div className="w-full mt-2 fade-in ease-in duration-300">
+                    <div onClick={toggleMobileMenu} className="border-t-2 fade-in border-b-2 border-gray-700">
+                        <Link href="/about">
+                            <button className="w-full text-left hover:bg-gray-700 p-2">About</button>
+                        </Link>
+                    </div>
+                    <div onClick={toggleMobileMenu} className="border-b-2 border-gray-700">
+                        <Link href="/contact">
+                            <button className="w-full text-left hover:bg-gray-700 p-2">Contact</button>
+                        </Link>
+                    </div>
+                    <div onClick={toggleMobileMenu} className="border-b-2 border-gray-700">
+                        <Link href="/book">
+                            <button className="w-full text-left hover:bg-gray-700 p-2">Book a Session</button>
+                        </Link>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
