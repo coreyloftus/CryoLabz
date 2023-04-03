@@ -6,15 +6,15 @@ import logo from "../public/assets/Cryolabz-logo.png"
 const Hero = () => {
     return (
         // hero container
-        <div className="h-screen mb-8">
-            <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins relative">
+        <div className="h-screen">
+            <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins relative pb-6">
                 <div className="flex flex-col justify-center">
                     <div className="w-full flex flex-cols text-center justify-center p-6 sm:p-2">
                         {/* card container */}
                         <div className="bg-blue-50 text-gray-800 rounded-lg p-6 mt-4">
                             {/* logo image container */}
                             <div className="mx-auto relative">
-                                <Image src={logo} width={450} height={450} alt="Cryolabz Logo" />
+                                <Image src={logo} width={450} height="auto" alt="Cryolabz Logo" />
                             </div>
                             {/* hero text */}
                             <div className="text-xl pt-2">
@@ -30,9 +30,9 @@ const Hero = () => {
                 </div>
             </div>
             {/* triangle clip-path */}
-            <div className="relative bottom-0 left-0 right-0 h-16 overflow-hidden">
+            <div className="relative bottom-0 left-0 right-0 h-16">
                 <div className="h-full w-full">
-                    <div className="h-full w-full" style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)", height: "4rem" }}>
+                    <div className="h-full w-full" style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)", height: "6rem" }}>
                         <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 h-full"></div>
                     </div>
                 </div>
