@@ -1,11 +1,11 @@
 import React from "react"
-import Benefits from "./Benefits"
-
+import Services from "./Services"
 const index = () => {
     return (
         <div>
-            <Benefits />
+            <Services />
         </div>
     )
 }
+
 export default index
