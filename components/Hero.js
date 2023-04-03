@@ -6,7 +6,7 @@ import logo from "../public/assets/Cryolabz-logo.png"
 const Hero = () => {
     return (
         // hero container
-        <div className="h-screen">
+        <div className="h-screen mb-8">
             <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins relative">
                 <div className="flex flex-col justify-center">
                     <div className="w-full flex flex-cols text-center justify-center p-6 sm:p-2">
@@ -28,9 +28,11 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                {/* triangle clip-path */}
-                <div className="absolute bottom-[-16] left-0 right-0 h-16">
-                    <div className="h-full w-full" style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)" }}>
+            </div>
+            {/* triangle clip-path */}
+            <div className="relative bottom-0 left-0 right-0 h-16 overflow-hidden">
+                <div className="h-full w-full">
+                    <div className="h-full w-full" style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)", height: "4rem" }}>
                         <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 h-full"></div>
                     </div>
                 </div>
