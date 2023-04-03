@@ -2,8 +2,8 @@ import Head from "next/head"
 import Hero from "@/components/Hero"
 import Testimonials from "@/components/Testimonials"
 import ContactForm from "@/components/ContactForm"
-import Services from "@/pages/services/Services"
-import Benefits from "@/pages/benefits/Benefits"
+import Services from "@/components/Services"
+import Benefits from "@/components/Benefits"
 
 export default function Home() {
     return (

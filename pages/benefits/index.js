@@ -1,5 +1,5 @@
 import React from "react"
-import Benefits from "./Benefits"
+import Benefits from "../../components/Benefits"
 
 const index = () => {
     return (
