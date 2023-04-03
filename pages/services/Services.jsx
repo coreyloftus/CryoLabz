@@ -43,7 +43,7 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="relative order-1 md:row-span-2 sm:order-2 md:row-start-2">
-                            <Image src={jointpain} objectFit="cover" objectPosition="bottom" className="w-full h-full" layout="fill" />
+                            <Image src={jointpain} objectFit="cover" objectPosition="bottom" className="w-full h-full" layout="fill" alt="joint pain" />
                         </div>
                     </div>
                 </div>
