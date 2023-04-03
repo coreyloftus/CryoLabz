@@ -6,7 +6,7 @@ import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 const index = () => {
     return (
         <div>
-            <div className="h-auto w-screen">
+            <div className="h-[74vh] w-screen">
                 <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins relative">
                     <div className="flex flex-col justify-center p-4 max-w-screen-md rounded-lg m-auto">
                         <div className="relative min-h-min bg-blue-50 text-gray-800 rounded-lg shadow-lg p-6">

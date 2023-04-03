@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="box-border top-0 w-screen bg-gray-800 text-gray-100 p-2 font-poppins z-20">
+        <div className="box-border top-0 w-screen h-[10vh] bg-gray-800 text-gray-100 p-2 font-poppins z-20">
             <div className="flex items-center justify-between">
                 <Link
                     href="/"
