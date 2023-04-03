@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { useInView } from "react-intersection-observer"
 import Link from "next/link"
-import { FaLinkedin, FaFacebookSquare, FaTwitterSquare, FaInstagram } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa"
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 
 const ContactForm = () => {
@@ -20,10 +21,20 @@ const ContactForm = () => {
         e.preventDefault()
         console.log(formData)
     }
+
+    const [isVisible, setIsVisible] = useState(false)
+    const { ref, inView } = useInView({ threshold: 0 })
+
+    useEffect(() => {
+        if (inView) {
+            setIsVisible(true)
+        }
+    }, [inView])
+
     return (
         <div>
-            <div className="h-full text-gray-50">
-                <div className="flex flex-col items-center justify-center h-full">
+            <div className={`h-full ${isVisible ? "fade-in-up duration-1000" : "opacity-0"}`} ref={ref}>
+                <div className="flex flex-col items-center justify-center h-full text-gray-50">
                     <div className="p-2 w-full h-full">
                         <p className="text-2xl text-center pb-4">Contact us today!</p>
                         <div className="grid lg:grid-cols-2 grid-cols-1 grid-rows-auto gap-y-4 h-full place-content-center p-6">
@@ -59,25 +70,19 @@ const ContactForm = () => {
                                     <Link href="https://www.instagram.com/cryolabz/" className="hover:text-gray-500">
                                         <div className="text-xl p-4 flex items-center">
                                             <FaInstagram size={40} />
-                                            <p className="text-md p-4">
-                                                <p>@cryolabz</p>
-                                            </p>
+                                            <p className="text-md p-4">@cryolabz</p>
                                         </div>
                                     </Link>
                                     <Link href="tel:718-912-4745" className="hover:text-gray-500">
                                         <div className="text-xl p-4 flex items-center">
                                             <AiOutlinePhone size={40} />
-                                            <p className="text-md p-4 ">
-                                                <p>+1 (347) 555-5555</p>
-                                            </p>
+                                            <p className="text-md p-4 ">+1 (347) 555-5555</p>
                                         </div>
                                     </Link>
                                     <Link href="mailto:contact@cryolabz.net" className="hover:text-gray-500">
                                         <div className="text-xl p-4 flex items-center">
                                             <AiOutlineMail size={40} />
-                                            <p className="text-md p-4">
-                                                <p>hello@cryolabz.com</p>
-                                            </p>
+                                            <p className="text-md p-4">hello@cryolabz.com</p>
                                         </div>
                                     </Link>
                                 </div>
