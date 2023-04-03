@@ -6,15 +6,15 @@ import logo from "../public/assets/Cryolabz-logo.png"
 const Hero = () => {
     return (
         // hero container
-        <div className="h-screen">
+        <div className="h-auto pb-10">
             <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins relative pb-6">
                 <div className="flex flex-col justify-center">
                     <div className="w-full flex flex-cols text-center justify-center p-6 sm:p-2">
                         {/* card container */}
                         <div className="bg-blue-50 text-gray-800 rounded-lg p-6 mt-4">
                             {/* logo image container */}
-                            <div className="mx-auto relative">
-                                <Image src={logo} width={450} height="auto" alt="Cryolabz Logo" />
+                            <div className="relative">
+                                <Image src={logo} width={450} height="auto" alt="Cryolabz Logo" className="mx-auto" />
                             </div>
                             {/* hero text */}
                             <div className="text-xl pt-2">
