@@ -4,9 +4,8 @@ import Image from "next/image"
 
 const Services = () => {
     return (
-        <div className="h-screen font-poppins">
+        <div className="mt-4 min-h-screen font-poppins">
             <div className="flex flex-col items-center justify-center h-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2d99cd" fill-opacity="1" d="M0,32L720,192L1440,32L1440,0L720,0L0,0Z"></path></svg>
                 <div className="bg-gray-800 text-gray-50 p-6 flex-grow">
                     <div className=""></div>
                     <h2 className="text-3xl font-bold pb-2 mb-4 text-center border-b text-[#11689b]">Services</h2>

@@ -2,10 +2,16 @@ import React from "react"
 
 const index = () => {
     return (
-        <div className="h-screen w-full bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-100 p-4">
+        <div className="min-h-screen w-full bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-100 p-4">
             <div className="p-4 bg-gray-800 rounded-lg my-6">
                 <div className="text-3xl font-bold pb-2">About CryoLabz</div>
                 <p>Cryo Labz is an on-the-go cryotherapy mobile service that services clients at their homes, offices, or desired locations.</p>
+            </div>
+            <div className="p-4 bg-gray-800 rounded-lg my-6">
+                <div className="text-3xl font-bold pb-2">Where We Work</div>
+                <p>
+                    Cryo Labz serves the greater NYC and New Jersey area. We come straight to you, wherever you are.
+                </p>
             </div>
             <div className="p-4 bg-gray-800 rounded-lg my-6">
                 <div className="text-3xl font-bold pb-2">Our Mission</div>

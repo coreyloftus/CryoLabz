@@ -15,10 +15,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="">
-                <div>
+                <div className="">
                     <Hero />
-                    <Services />
-                    <Benefits />
+                    {/* <Services /> */}
+                    {/* <Benefits /> */}
                     <Testimonials />
                     <ContactForm />
                 </div>

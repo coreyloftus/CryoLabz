@@ -99,7 +99,7 @@ const Testimonials = () => {
 
     const updatedReviews = [...reviews, ...reviews]
     return (
-        <div>
+        <div className="h-auto w-screen">
             <div className="w-full h-full text-gray-50">
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="flex justify-between w-full px-4">
