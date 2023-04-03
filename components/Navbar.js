@@ -54,20 +54,20 @@ const Navbar = () => {
                 {mobileMenu && <RxCross1 size={30} onClick={toggleMobileMenu} />}
             </div>
             {mobileMenu && (
-                <div className="w-full mt-2 fade-in ease-in duration-300">
-                    <div onClick={toggleMobileMenu} className="border-t-2 fade-in border-b-2 border-gray-700">
+                <div className="w-full mt-2">
+                    <div onClick={toggleMobileMenu} className="border-t-2 border-b-2 border-gray-700">
                         <Link href="/about">
-                            <button className="w-full text-left hover:bg-gray-700 p-2">About</button>
+                            <button className="w-full text-center hover:bg-gray-700 p-2">About</button>
                         </Link>
                     </div>
                     <div onClick={toggleMobileMenu} className="border-b-2 border-gray-700">
                         <Link href="/contact">
-                            <button className="w-full text-left hover:bg-gray-700 p-2">Contact</button>
+                            <button className="w-full text-center hover:bg-gray-700 p-2">Contact</button>
                         </Link>
                     </div>
                     <div onClick={toggleMobileMenu} className="border-b-2 border-gray-700">
                         <Link href="/book">
-                            <button className="w-full text-left hover:bg-gray-700 p-2">Book a Session</button>
+                            <button className="w-full text-center hover:bg-gray-700 p-2">Book a Session</button>
                         </Link>
                     </div>
                 </div>
