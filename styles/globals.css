@@ -4,7 +4,50 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-.icebackground{
-    background-image: url('/public/assets/icebackground.jpg');
+.icebackground {
+    background-image: url("/public/assets/icebackground.jpg");
     background-size: cover;
+}
+.fade-in-up {
+    animation: fade-in-up ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50% {
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.slide-in-from-left {
+    animation: slide-in-from-left 1s ease-in-out;
+}
+@keyframes slide-in-from-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.slide-in-from-right {
+    animation: slide-in-from-right 1s ease-in-out;
+}
+@keyframes slide-in-from-right {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

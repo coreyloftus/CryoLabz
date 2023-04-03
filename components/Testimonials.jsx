@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { AiFillStar, AiOutlineStar, AiOutlineLeft, AiOutlineRight } from "react-icons/ai"
+import { useInView } from "react-intersection-observer"
 
 const Testimonials = () => {
     const reviews = [
@@ -69,9 +70,18 @@ const Testimonials = () => {
             stars: 4,
         },
     ]
+    const [isVisible, setIsVisible] = useState(false)
+    const { ref, inView } = useInView({ threshold: 0 })
+
     const [page, setPage] = useState(1)
     const [reviewsPerPage, setReviewsPerPage] = useState(4)
     const maxPage = Math.ceil(reviews.length / reviewsPerPage)
+
+    useEffect(() => {
+        if (inView) {
+            setIsVisible(true)
+        }
+    }, [inView])
 
     useEffect(() => {
         function handleResize() {
@@ -99,10 +109,10 @@ const Testimonials = () => {
 
     const updatedReviews = [...reviews, ...reviews]
     return (
-        <div>
-            <div className="w-full h-full text-gray-50">
+        <div className={`h-auto w-full mb-16 ${isVisible ? "fade-in-up duration-1000" : "opacity-0"}`} ref={ref}>
+            <div className="w-full text-gray-50 fade-in">
                 <div className="flex flex-col items-center justify-center h-full">
-                    <div className="flex justify-between w-full px-4">
+                    <div className="flex justify-between w-full px-4 md:px-2">
                         <button className="mr-2 transition ease-in-out hover:-translate-x-1 hover:scale-110" onClick={handlePrevPage}>
                             <AiOutlineLeft size={30} />
                         </button>

@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { useInView } from "react-intersection-observer"
 import Link from "next/link"
-import { FaLinkedin, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa"
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 
 const ContactForm = () => {
@@ -20,10 +21,20 @@ const ContactForm = () => {
         e.preventDefault()
         console.log(formData)
     }
+
+    const [isVisible, setIsVisible] = useState(false)
+    const { ref, inView } = useInView({ threshold: 0 })
+
+    useEffect(() => {
+        if (inView) {
+            setIsVisible(true)
+        }
+    }, [inView])
+
     return (
         <div>
-            <div className="h-full text-gray-50">
-                <div className="flex flex-col items-center justify-center h-full">
+            <div className={`h-full ${isVisible ? "fade-in-up duration-1000" : "opacity-0"}`} ref={ref}>
+                <div className="flex flex-col items-center justify-center h-full text-gray-50">
                     <div className="p-2 w-full h-full">
                         <p className="text-2xl text-center pb-4">Contact us today!</p>
                         <div className="grid lg:grid-cols-2 grid-cols-1 grid-rows-auto gap-y-4 h-full place-content-center p-6">
@@ -54,38 +65,26 @@ const ContactForm = () => {
                                     <button className="mx-auto bg-blue-500 hover:bg-orange-500 rounded-lg p-2 mt-1 w-[50%]  max-w-[300px] text-2xl text-gray-50">Send</button>
                                 </div>
                             </form>
-                            <div>
-                                <div className="hidden rounded-md lg:grid lg:grid-cols-2">
-                                    <div className="text-xl p-4 flex justify-end">
-                                        <FaLinkedin size={30} />
-                                    </div>
-                                    <ul className="text-md p-4 flex justify-start">
-                                        <li>@cryolabz</li>
-                                    </ul>
-                                    <div className="text-xl p-4 flex justify-end">
-                                        <FaTwitterSquare size={30} />
-                                    </div>
-                                    <ul className="text-md p-4 flex justify-start">
-                                        <li>@cryolabz</li>
-                                    </ul>
-                                    <div className="text-xl p-4 flex justify-end">
-                                        <FaFacebookSquare size={30} />
-                                    </div>
-                                    <ul className="text-md p-4 flex justify-start">
-                                        <li>facebook.com/cryolabs</li>
-                                    </ul>
-                                    <div className="text-xl p-4 flex justify-end">
-                                        <AiOutlinePhone size={30} />
-                                    </div>
-                                    <ul className="text-md p-4 flex justify-start">
-                                        <li>+1 (347) 555-5555</li>
-                                    </ul>
-                                    <div className="text-xl p-4 flex justify-end">
-                                        <AiOutlineMail size={30} />
-                                    </div>
-                                    <ul className="text-md p-4 flex justify-start">
-                                        <li>hello@cryolabz.com</li>
-                                    </ul>
+                            <div className="mx-auto">
+                                <div className="hidden lg:block">
+                                    <Link href="https://www.instagram.com/cryolabz/" className="hover:text-gray-500">
+                                        <div className="text-xl p-4 flex items-center">
+                                            <FaInstagram size={40} />
+                                            <p className="text-md p-4">@cryolabz</p>
+                                        </div>
+                                    </Link>
+                                    <Link href="tel:718-912-4745" className="hover:text-gray-500">
+                                        <div className="text-xl p-4 flex items-center">
+                                            <AiOutlinePhone size={40} />
+                                            <p className="text-md p-4 ">+1 (347) 555-5555</p>
+                                        </div>
+                                    </Link>
+                                    <Link href="mailto:contact@cryolabz.net" className="hover:text-gray-500">
+                                        <div className="text-xl p-4 flex items-center">
+                                            <AiOutlineMail size={40} />
+                                            <p className="text-md p-4">hello@cryolabz.com</p>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
