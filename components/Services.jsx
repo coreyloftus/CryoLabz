@@ -6,7 +6,8 @@ const Services = () => {
     return (
         <div className="h-screen font-poppins">
             <div className="flex flex-col items-center justify-center h-full">
-                <div className="bg-blue-50 text-gray-800 p-6 flex-grow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2d99cd" fill-opacity="1" d="M0,32L720,192L1440,32L1440,0L720,0L0,0Z"></path></svg>
+                <div className="bg-gray-800 text-gray-50 p-6 flex-grow">
                     <div className=""></div>
                     <h2 className="text-3xl font-bold pb-2 mb-4 text-center border-b text-[#11689b]">Services</h2>
                     <div className="sm:flex md:grid grid-rows-2 grid-cols-2 gap-4">

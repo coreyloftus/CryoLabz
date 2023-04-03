@@ -14,7 +14,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700">
+            <main className="">
                 <div>
                     <Hero />
                     <Services />

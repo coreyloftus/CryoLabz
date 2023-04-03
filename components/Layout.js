@@ -4,7 +4,8 @@ import Footer from "./Footer"
 
 const Layout = ({ children }) => {
     return (
-        <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins">
+        // <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins">
+        <div className="bg-gray-800 text-gray-50 font-poppins">
             <Navbar />
             <main className="w-full">{children}</main>
             <Footer />
