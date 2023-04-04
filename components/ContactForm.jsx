@@ -47,7 +47,9 @@ const ContactForm = () => {
             <div className={`h-full ${isVisible ? "fade-in-up duration-1000" : "opacity-0"}`} ref={ref}>
                 <div className="flex flex-col items-center justify-center h-full text-gray-50">
                     <div className="p-2 w-full h-full">
+                        {/* container header */}
                         <p className="text-2xl text-center pb-4">Contact us today!</p>
+                        {/* form */}
                         <div className="grid lg:grid-cols-2 grid-cols-1 grid-rows-auto gap-y-4 h-full place-content-center p-6">
                             <form onSubmit={handleSubmit} className="text-gray-800">
                                 <div className="row-start-3 col-start-1 col-span-2 p-2">
@@ -73,9 +75,10 @@ const ContactForm = () => {
                                     <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder="How can we help?" className="border p-2 rounded-md w-full resize-none" required />
                                 </div>
                                 <div className="row-start-7 p-2 flex">
-                                    <button className="mx-auto bg-blue-500 hover:bg-orange-500 rounded-lg p-2 mt-1 w-[50%]  max-w-[300px] text-2xl text-gray-50">Send</button>
+                                    <button className="mx-auto bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2 mt-1 w-[50%]  max-w-[300px] text-2xl text-gray-50">Send</button>
                                 </div>
                             </form>
+                            {/* contact links */}
                             <div className="mx-auto">
                                 <div className="hidden lg:block">
                                     <Link href="https://www.instagram.com/cryolabz/" className="hover:text-gray-500">
