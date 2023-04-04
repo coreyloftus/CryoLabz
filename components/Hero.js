@@ -32,9 +32,10 @@ const Hero = () => {
             {/* triangle clip-path */}
             <div className="relative bottom-0 left-0 right-0 h-16">
                 <div className="h-full w-full">
-                    <div className="h-full w-full" style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)", height: "6rem" }}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L288,192L576,64L864,96L1152,0L1440,256L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path></svg>
+                    {/* <div className="h-full w-full" style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)", height: "6rem" }}>
                         <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 h-full"></div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

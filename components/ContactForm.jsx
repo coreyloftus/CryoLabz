@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import Link from "next/link"
 import { FaInstagram } from "react-icons/fa"
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
+import emailjs from "@emailjs/browser"
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -16,10 +17,20 @@ const ContactForm = () => {
         const { name, value } = e.target
         setFormData((prevState) => ({ ...prevState, [name]: value }))
     }
+    const form = useRef()
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        emailjs.sendForm("service_vnx6o2i", "portfolio_contact_form", form.current, "J44JXfwvuyNXZtYsg").then(
+            (result) => {
+                console.log(result.text)
+            },
+            (error) => {
+                console.log(error.text)
+            }
+        )
         console.log(formData)
+        setFormData({ name: "", email: "", phone: "", message: "", heardAbout: "" })
     }
 
     const [isVisible, setIsVisible] = useState(false)
