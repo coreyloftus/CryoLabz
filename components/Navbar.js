@@ -43,31 +43,37 @@ const Navbar = () => {
                         <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2">Book a Session</button>
                     </Link>
                 </div>
-                {/* Hamburger menu */}
-                <div className="md:hidden">
+                {/* Hamburger button */}
+                <div className="md:hidden pr-2 cursor-pointer">
                     {!mobileMenu && (
                         <div>
                             <GiHamburgerMenu onClick={toggleMobileMenu} size={40} className="text-[#2bbff0]/80" />
                         </div>
                     )}
+                    {mobileMenu && <RxCross1 size={40} onClick={toggleMobileMenu} className="text-[#2bbff0]/80" />}
                 </div>
-                {mobileMenu && <RxCross1 size={30} onClick={toggleMobileMenu} />}
             </div>
+            {/* mobile menu */}
             {mobileMenu && (
                 <div className="w-full mt-2">
+                    <div onClick={toggleMobileMenu} className="border-t-2 border-gray-700">
+                        <Link href="/">
+                            <button className="w-full text-center hover:bg-gray-700 hover:font-bold p-2">Home</button>
+                        </Link>
+                    </div>
                     <div onClick={toggleMobileMenu} className="border-t-2 border-b-2 border-gray-700">
                         <Link href="/about">
-                            <button className="w-full text-center hover:bg-gray-700 p-2">About</button>
+                            <button className="w-full text-center hover:bg-gray-700 hover:font-bold p-2">About</button>
                         </Link>
                     </div>
                     <div onClick={toggleMobileMenu} className="border-b-2 border-gray-700">
                         <Link href="/contact">
-                            <button className="w-full text-center hover:bg-gray-700 p-2">Contact</button>
+                            <button className="w-full text-center hover:bg-gray-700 hover:font-bold p-2">Contact</button>
                         </Link>
                     </div>
-                    <div onClick={toggleMobileMenu} className="border-b-2 border-gray-700">
+                    <div onClick={toggleMobileMenu} className=" border-gray-700">
                         <Link href="/book">
-                            <button className="w-full text-center hover:bg-gray-700 p-2">Book a Session</button>
+                            <button className="w-full text-center hover:bg-gray-700 hover:font-bold p-2">Book a Session</button>
                         </Link>
                     </div>
                 </div>
