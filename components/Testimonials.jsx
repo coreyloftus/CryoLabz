@@ -5,11 +5,6 @@ import { useInView } from "react-intersection-observer"
 const Testimonials = () => {
     const reviews = [
         {
-            name: "Corey Loftus",
-            review: "Diego is fantastic. He was friendly, professional, and knowledgeable. After the treatment, my shoulder is feeling brand new! Thank you!",
-            stars: 5,
-        },
-        {
             name: "Vasco da Gama",
             review: "I was skeptical at first, but Diego's mobile cryo therapy service really works wonders! I highly recommend him to anyone looking to recover quickly after intense physical activity.",
             stars: 4,
