@@ -4,7 +4,9 @@ import { InlineWidget } from "react-calendly"
 const book = () => {
     return (
         <div className="h-[80vh] w-full z-10">
+            <div className="p-2">
             <InlineWidget url="https://calendly.com/coreyloftus" styles={{ height: "80vh", overflow: "hidden" }} />
+            </div>
         </div>
     )
 }
