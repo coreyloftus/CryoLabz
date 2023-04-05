@@ -90,13 +90,13 @@ const ContactForm = () => {
                                     <Link href="tel:718-912-4745" className="hover:text-gray-500">
                                         <div className="text-xl p-4 flex items-center">
                                             <AiOutlinePhone size={40} />
-                                            <p className="text-md p-4 ">+1 (347) 555-5555</p>
+                                            <p className="text-md p-4 ">+1 (718) 912-4745</p>
                                         </div>
                                     </Link>
                                     <Link href="mailto:contact@cryolabz.net" className="hover:text-gray-500">
                                         <div className="text-xl p-4 flex items-center">
                                             <AiOutlineMail size={40} />
-                                            <p className="text-md p-4">hello@cryolabz.com</p>
+                                            <p className="text-md p-4">contact@cryolabz.net</p>
                                         </div>
                                     </Link>
                                 </div>
