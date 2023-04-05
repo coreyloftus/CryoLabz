@@ -6,7 +6,7 @@ import logo from "../public/assets/Cryolabz-logo.png"
 const Hero = () => {
     return (
         // hero container
-        <div className="h-auto pb-10">
+        <div className="min-h-screen pb-10">
             <div className="bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-50 font-poppins relative pb-6">
                 <div className="flex flex-col justify-center">
                     <div className="w-full flex flex-cols text-center justify-center p-6 sm:p-2">
@@ -30,7 +30,7 @@ const Hero = () => {
                 </div>
             </div>
             {/* bottom style on component */}
-            <div className="relative bottom-0 left-0 right-0 h-16">
+            <div className="relative bottom-0 left-0 right-0 h-10">
                 <div className="h-full w-full">
                     {/* <div className="relative bottom-0 left-0 right-0 h-16">
                         <div className="h-full w-full flex justify-center relative z-30">
