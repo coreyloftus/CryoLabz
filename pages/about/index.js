@@ -2,8 +2,8 @@ import React from "react"
 
 const index = () => {
     return (
-        <div className="min-h-screen w-full">
-            <div className="p-4 h-full bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-100">
+        <div className="min-h-screen">
+            <div className="p-4 bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700 text-gray-100">
                 <div className="flex flex-col items-center">
                     <div className="p-4 bg-gray-800 rounded-lg my-6 max-w-xl">
                         <div className="text-3xl font-bold pb-2">About CryoLabz</div>
@@ -32,9 +32,9 @@ const index = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-16">
-                <div className="h-full w-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <div className="h-full relative">
+                <div className="w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" width="100%">
                         <linearGradient id="gradient" x1="0%" x2="100%">
                             <stop offset="0%" stop-color="#11689b" />
                             <stop offset="50%" stop-color="#2bbff0" />
