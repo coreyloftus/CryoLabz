@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { RxCross1 } from "react-icons/rx"
 import logoOnly from "../public/assets/Cryolabz-logo-only.png"
@@ -8,7 +9,7 @@ import textOnly from "../public/assets/Cryolabz-text-only.png"
 
 const Navbar = () => {
     const [mobileMenu, setMobileMenu] = useState(false)
-
+    const pathname = usePathname()
     const toggleMobileMenu = () => {
         setMobileMenu(!mobileMenu)
     }
@@ -28,16 +29,17 @@ const Navbar = () => {
                         </div>
                     </div>
                 </Link>
-                {/* Links to other pages */}
+                {/* Center section -> banner text */}
                 <div>
                     <p className="font-bold hidden md:block">Free consultations -- Book now!</p>
                 </div>
+                {/* Right section -> links to pages */}
                 <div className="hidden md:inline">
                     <Link href="/about">
-                        <button className="mx-4 border-b-2 border-transparent hover:border-gray-100 p-2">About</button>
+                        <button className={`mx-4 border-b-2 ${pathname === "/about" ? `border-gray-100` : `border-transparent`} hover:border-gray-100 p-2`}>About</button>
                     </Link>
                     <Link href="/contact">
-                        <button className="mx-4 border-b-2 border-transparent hover:border-gray-100 p-2">Contact</button>
+                        <button className={`mx-4 border-b-2 ${pathname === "/contact" ? `border-gray-100` : `border-transparent`} hover:border-gray-100 p-2`}>Contact</button>
                     </Link>
                     <Link href="/book">
                         <button className="bg-[#2bbff0] hover:bg-[#2bbff0]/80 rounded-lg p-2">Book a Session</button>
