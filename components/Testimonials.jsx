@@ -104,8 +104,8 @@ const Testimonials = () => {
 
     const updatedReviews = [...reviews, ...reviews]
     return (
-        <div className={`h-auto w-full mb-16 ${isVisible ? "fade-in-up duration-1000" : "opacity-0"}`} ref={ref}>
-            <div className="w-full text-gray-50 fade-in">
+        <div className={`h-auto w-full mb-16 ${isVisible ? "fade-up duration-500" : "opacity-0"}`} ref={ref}>
+            <div className="w-full text-gray-50">
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="flex justify-between w-full px-4 md:px-2">
                         <button className="mr-2 transition ease-in-out hover:-translate-x-1 hover:scale-110" onClick={handlePrevPage}>

@@ -8,20 +8,18 @@
     background-image: url("/public/assets/icebackground.jpg");
     background-size: cover;
 }
-.fade-in-up {
-    animation: fade-in-up ease-in-out;
+.fade-up {
+    animation: fade-up ease-in-out 0.5s 1;
 }
 
-@keyframes fade-in {
+@keyframes fade-up {
     0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    50% {
+        opacity: 0.95;
+        transform: translateY(33%);
     }
     100% {
         opacity: 1;
-        transform: translateY(0%);
+        transform: translateY(0);
     }
 }
 
