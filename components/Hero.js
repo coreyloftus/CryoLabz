@@ -32,16 +32,6 @@ const Hero = () => {
             {/* bottom style on component */}
             <div className="relative bottom-0 left-0 right-0 h-10">
                 <div className="h-full w-full">
-                    {/* <div className="relative bottom-0 left-0 right-0 h-16">
-                        <div className="h-full w-full flex justify-center relative z-30">
-                            <svg width="300" height="100" viewBox="0 0 300 100">
-                                <polygon points="50,2 90,25 90,75 50,98 10,75 10,25" stroke="white" strokeWidth="2" fillOpacity="0" />
-                                <polygon points="150,2 190,25 190,75 150,98 110,75 110,25" fill="none" stroke="white" strokeWidth="2" />
-                                <polygon points="250,2 290,25 290,75 250,98 210,75 210,25" fill="none" stroke="white" strokeWidth="2" />
-                            </svg>
-                        </div>
-                        <div className="absolute z-10 bottom-0 left-0 right-0 h-16 bg-gradient-to-r from-sky-700 via-sky-400 to-sky-700"></div>
-                    </div> */}
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                         <linearGradient id="gradient" x1="0%" x2="100%">
                             <stop offset="0%" stop-color="#11689b" />

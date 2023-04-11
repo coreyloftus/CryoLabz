@@ -1,9 +1,13 @@
+"use client"
 import React from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { FaInstagram } from "react-icons/fa"
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai"
 
 const Footer = () => {
+    const pathname = usePathname()
+
     return (
         <div className="w-full bg-gray-800 text-gray-100 p-2 bottom-0">
             <div className="flex p-4 justify-around">
@@ -26,14 +30,14 @@ const Footer = () => {
                 </div>
                 <div>
                     <Link href="/contact">
-                        <p className="p-1 border-l-2 border-transparent hover:border-gray-100">Contact</p>
+                        <p className={`px-4 pb-2 border-l-2 border-transparent hover:border-gray-100`}>Contact</p>
                     </Link>
                     <Link href="/book">
-                        <p className="p-1 border-l-2 border-transparent hover:border-gray-100">Book a session</p>
+                        <p className={`px-4 pt-2 border-l-2 border-transparent hover:border-gray-100`}>Book a session</p>
                     </Link>
                 </div>
             </div>
-            <h2 className="text-center text-sm mb-2">Copyright CryoLabz 2023</h2>
+            <h2 className="text-center text-sm m-4">Copyright CryoLabz 2023</h2>
         </div>
     )
 }

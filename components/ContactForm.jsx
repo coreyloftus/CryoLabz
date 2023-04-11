@@ -44,7 +44,7 @@ const ContactForm = () => {
 
     return (
         <div>
-            <div className={`h-full ${isVisible ? "fade-in-up duration-1000" : "opacity-0"}`} ref={ref}>
+            <div className={`h-full ${isVisible ? "fade-up" : "opacity-0"}`} ref={ref}>
                 <div className="flex flex-col items-center justify-center h-full text-gray-50">
                     <div className="p-2 w-full h-full">
                         {/* container header */}
