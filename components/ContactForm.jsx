@@ -21,7 +21,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        emailjs.sendForm("service_vnx6o2i", "portfolio_contact_form", form.current, "J44JXfwvuyNXZtYsg").then(
+        emailjs.sendForm("service_8s2rxhb", "template_r8r87c1", form.current, "9sB262X-_OUx4xMy5").then(
             (result) => {
                 console.log(result.text)
             },
@@ -51,7 +51,7 @@ const ContactForm = () => {
                         <p className="text-2xl text-center pb-4">Contact us today!</p>
                         {/* form */}
                         <div className="grid lg:grid-cols-2 grid-cols-1 grid-rows-auto gap-y-4 h-full place-content-center p-6">
-                            <form onSubmit={handleSubmit} className="text-gray-800">
+                            <form ref={form} onSubmit={handleSubmit} className="text-gray-800">
                                 <div className="row-start-3 col-start-1 col-span-2 p-2">
                                     <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" className="border p-2 rounded-md w-full" required />
                                 </div>
