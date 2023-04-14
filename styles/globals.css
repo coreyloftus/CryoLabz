@@ -14,11 +14,9 @@
 
 @keyframes fade-up {
     0% {
-        opacity: 0.99;
         transform: translateY(33%);
     }
     100% {
-        opacity: 1;
         transform: translateY(0);
     }
 }
