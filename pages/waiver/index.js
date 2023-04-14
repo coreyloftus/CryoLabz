@@ -1,13 +1,18 @@
 import React from "react"
-
-const waiver = () => {
+const index = () => {
     return (
         <div className="h-screen">
             <div className="flex justify-center items-center">
-                <h2 className="text-3xl">Waiver Component</h2>
+                <div className="p-6">
+                    <a href="/assets/CryoLabz-Waiver-Print-version.pdf" download>
+                        <p className="text-3xl hover:text-gray-300">
+                            Click here to <span className="font-bold">download the Waiver</span>
+                        </p>
+                    </a>
+                </div>
             </div>
         </div>
     )
 }
 
-export default waiver
+export default index
